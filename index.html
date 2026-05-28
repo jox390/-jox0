@@ -72,8 +72,14 @@ body {
             transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             overflow: hidden;
             transform-style: preserve-3d;
-            height: 380px;
+            height: 320px;
             cursor: pointer;
+        }
+
+        @media (min-width: 768px) {
+            .premium-card {
+                height: 380px;
+            }
         }
 
         .premium-card::before {
@@ -652,13 +658,13 @@ body {
     </div>
 
     <!-- Navigation refined with gold accents -->
-    <nav class="fixed w-full z-[100] px-6 py-4 top-0" id="navbar">
+    <nav class="fixed w-full z-[100] px-4 md:px-6 py-4 top-0" id="navbar">
         <div class="max-w-7xl mx-auto glass-panel rounded-full px-6 py-3 flex justify-between items-center border border-gold-light/40 shadow-2xl">
             <div class="flex items-center gap-3">
                 <div class="w-10 h-10 bg-gradient-to-br from-[#D4AF37] to-[#b76e79] rounded-xl flex items-center justify-center shadow-md shadow-[#D4AF37]/20">
                     <span class="font-black text-xl text-black">j</span>
                 </div>
-                <span class="text-xl font-black uppercase tracking-wider">jox<span class="text-gold">.media</span></span>
+                <span class="text-lg md:text-xl font-black uppercase tracking-wider">jox<span class="text-gold">.media</span></span>
             </div>
             <div class="hidden md:flex gap-10 text-sm font-semibold uppercase tracking-wider">
                 <a href="#services" class="nav-link hover:text-gold transition duration-300">خدمات VIP</a>
@@ -670,7 +676,7 @@ body {
     </nav>
 
     <!-- Hero Section with updated color theme -->
-    <header class="relative pt-52 pb-20 px-6 text-center">
+    <header class="relative pt-32 md:pt-52 pb-12 md:pb-20 px-6 text-center">
         <div data-aos="fade-down" class="inline-flex items-center gap-2 px-5 py-1.5 rounded-full border border-gold/30 bg-gold/5 text-gold text-[11px] font-black tracking-[0.25em] uppercase mb-7">
             <span class="relative flex h-2 w-2">
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75"></span>
@@ -678,7 +684,7 @@ body {
             </span>
             JOX · DIGITAL PRIVILEGE
         </div>
-        <h1 class="hero-entrance glitch-text text-6xl md:text-8xl lg:text-9xl font-black mb-7 italic tracking-tighter leading-[0.95]">
+        <h1 class="hero-entrance glitch-text text-5xl md:text-8xl lg:text-9xl font-black mb-7 italic tracking-tighter leading-[0.95]">
             <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#D4AF37] via-[#eacf7a] to-[#b76e79]">جوكس - jox</span>
             <span class="text-white"> للميديا</span>
         </h1>
@@ -733,13 +739,13 @@ body {
             <p data-aos="fade-up" data-aos-delay="100" class="text-gray-400 max-w-xl mx-auto">حلول رقمية متكاملة بأسعار تنافسية وضمان كامل على كل خدمة</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
             
             <!-- عمل موقع -->
-            <div data-aos="fade-up" data-aos-delay="100" class="premium-card card-website p-7 group relative" style="height: 380px; perspective: 1000px;">
+            <div data-aos="fade-up" data-aos-delay="100" class="premium-card card-website p-5 md:p-7 group relative" style="perspective: 1000px;">
                 <div class="card-inner w-full h-full relative transition-transform duration-800 ease-in-out" style="transform-style: preserve-3d;">
                     <!-- Front -->
-                    <div class="card-front absolute inset-0 w-full h-full backface-visibility-hidden rounded-2xl p-7 flex flex-col justify-between">
+                    <div class="card-front absolute inset-0 w-full h-full backface-visibility-hidden rounded-2xl p-5 md:p-7 flex flex-col justify-between">
                         <span class="discount-badge" style="background: linear-gradient(135deg, #6366f1, #4338ca);">جديد</span>
                         <div>
                             <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 text-3xl bg-indigo-900/10 text-indigo-300 mx-auto">
@@ -754,7 +760,7 @@ body {
                         </div>
                     </div>
                     <!-- Back -->
-                    <div class="card-back absolute inset-0 w-full h-full transform rotate-y-180 backface-visibility-hidden rounded-2xl p-7 bg-gradient-to-br from-indigo-900/95 to-purple-900/95 flex flex-col justify-between border border-indigo-500/30 glass-panel">
+                    <div class="card-back absolute inset-0 w-full h-full transform rotate-y-180 backface-visibility-hidden rounded-2xl p-5 md:p-7 bg-gradient-to-br from-indigo-900/95 to-purple-900/95 flex flex-col justify-between border border-indigo-500/30 glass-panel">
                         <h4 class="text-xl font-black text-indigo-300 mb-4 text-center">باقات المواقع</h4>
                         <div class="space-y-3 mb-6">
                             <div class="flex justify-between text-sm">
@@ -770,7 +776,7 @@ body {
                                 <span class="text-indigo-300 font-bold">5000 جنيه</span>
                             </div>
                         </div>
-                        <button onclick="openOrderModal('عمل موقع', 'website')" class="w-full py-3 border border-indigo-400/50 text-indigo-300 rounded-xl font-bold hover:bg-indigo-500/20 transition backdrop-blur-sm">
+                        <button onclick="openOrderModal('عمل موقع', 'website')" class="w-full py-3.5 text-sm md:text-lg border border-indigo-400/50 text-indigo-300 rounded-xl font-bold hover:bg-indigo-500/20 transition backdrop-blur-sm">
                             اطلب موقعك الآن <i class="fa-solid fa-arrow-left ml-2"></i>
                         </button>
                     </div>
@@ -778,34 +784,34 @@ body {
             </div>
 
             <!-- فودافون كاش مميز -->
-            <div data-aos="fade-up" data-aos-delay="200" class="premium-card lg:col-span-2 p-8 flex flex-col md:flex-row items-center justify-between gap-8 group relative" style="height: 380px; perspective: 1000px;">
+            <div data-aos="fade-up" data-aos-delay="200" class="premium-card lg:col-span-2 p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-8 group relative" style="perspective: 1000px;">
                 <div class="card-inner w-full h-full relative transition-transform duration-800 ease-in-out" style="transform-style: preserve-3d;">
                     <!-- Front -->
-                    <div class="card-front absolute inset-0 w-full h-full backface-visibility-hidden rounded-2xl flex flex-col md:flex-row items-center justify-between p-8">
+                    <div class="card-front absolute inset-0 w-full h-full backface-visibility-hidden rounded-2xl flex flex-col md:flex-row items-center justify-between p-6 md:p-8">
                         <span class="discount-badge">الأكثر مبيعاً</span>
                         <div class="flex-1 space-y-5 text-right">
                             <div class="flex items-center gap-2 justify-end">
                                 <i class="fa-solid fa-crown text-gold text-xl"></i>
                                 <span class="text-xs font-bold uppercase tracking-wider text-gold">الأكثر طلباً</span>
                             </div>
-                            <h3 class="text-5xl font-black italic group-hover:text-gold transition duration-300 text-right">فودافون كاش</h3>
+                            <h3 class="text-5xl font-black italic group-hover:text-gold transition duration-300 text-right">باقات فودافون</h3>
                             <p class="text-gray-300 text-lg text-right">شحن فوري لكافة الباقات والخدمات بأقل عمولة وأسرع تنفيذ في مصر.</p>
                             <div class="flex items-center gap-3 justify-end">
                                 <span class="price-original">عمولة 3%</span>
                                 <span class="price-current">عمولة 1% فقط</span>
                             </div>
                         </div>
-                        <div class="relative w-44 h-44 flex items-center justify-center">
+                        <div class="relative w-32 h-32 md:w-44 md:h-44 flex items-center justify-center">
                             <div class="absolute inset-0 bg-gold/10 blur-[70px] rounded-full"></div>
-                            <i class="fa-solid fa-money-bill-wave text-8xl text-gold shimmer-gold floating-icon"></i>
+                            <i class="fa-solid fa-money-bill-wave text-6xl md:text-8xl text-gold shimmer-gold floating-icon"></i>
                         </div>
                     </div>
                     <!-- Back -->
-                    <div class="card-back absolute inset-0 w-full h-full transform rotate-y-180 backface-visibility-hidden rounded-2xl p-8 bg-gradient-to-br from-yellow-900/95 to-orange-900/95 flex flex-col justify-center items-center text-center gap-6 border border-yellow-500/30 glass-panel">
+                    <div class="card-back absolute inset-0 w-full h-full transform rotate-y-180 backface-visibility-hidden rounded-2xl p-6 md:p-8 bg-gradient-to-br from-yellow-900/95 to-orange-900/95 flex flex-col justify-center items-center text-center gap-6 border border-yellow-500/30 glass-panel mb-4">
                         <h4 class="text-2xl font-black text-yellow-300 mb-4">باقات فودافون كاش</h4>
                         <div class="grid grid-cols-2 gap-4 w-full max-w-md">
                             <div class="bg-white/5 p-3 rounded-xl border border-yellow-400/30">
-                                <div class="text-yellow-300 font-bold">فليكس 120</div>
+                                <div class="text-yellow-300 font-bold">فليكس 115</div>
                                 <div class="text-sm text-gray-300">120 جنيه</div>
                             </div>
                             <div class="bg-white/5 p-3 rounded-xl border border-yellow-400/30">
@@ -813,23 +819,23 @@ body {
                                 <div class="text-sm text-gray-300">100 جنيه</div>
                             </div>
                             <div class="bg-white/5 p-3 rounded-xl border border-yellow-400/30">
-                                <div class="text-yellow-300 font-bold">فليكس 300</div>
-                                <div class="text-sm text-gray-300">70 جنيه</div>
+                                <div class="text-yellow-300 font-bold">فليكس 345</div>
+                                <div class="text-sm text-gray-300"> 350جنيه</div>
                             </div>
                             <div class="bg-white/5 p-3 rounded-xl border border-yellow-400/30">
                                 <div class="text-yellow-300 font-bold">كاش باقة</div>
                                 <div class="text-sm text-gray-300">عمولة 1%</div>
                             </div>
                         </div>
-                        <button onclick="openOrderModal('فودافون كاش', 'voda')" class="btn-main px-9 py-4 rounded-2xl font-black text-lg flex items-center gap-2 shadow-xl max-w-xs mx-auto">
-                            اشحن رصيدك <i class="fa-regular fa-credit-card"></i>
+                        <button onclick="openOrderModal('فودافون كاش', 'voda')" class="btn-main px-6 py-3 md:px-9 md:py-4 rounded-2xl font-black text-sm md:text-lg flex items-center gap-2 shadow-xl max-w-xs mx-auto mt-4">
+                            اطلب الآن <i class="fa-regular fa-credit-card"></i>
                         </button>
                     </div>
                 </div>
             </div>
 
             <!-- تزويد الانستا -->
-            <div data-aos="fade-up" data-aos-delay="300" class="premium-card card-insta p-7 group relative">
+            <div data-aos="fade-up" data-aos-delay="300" class="premium-card card-insta p-5 md:p-7 group relative">
                 <span class="discount-badge" style="background: linear-gradient(135deg, #e11d48, #be123c);">جديد</span>
                 <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 text-3xl bg-pink-900/20 text-pink-400">
                     <i class="fa-brands fa-instagram"></i>
@@ -840,11 +846,11 @@ body {
                     <span class="price-original">100 جنيه</span>
                     <span class="price-current" style="color: #f472b6;">70 جنيه / ألف</span>
                 </div>
-                <button onclick="openOrderModal('تزويد الانستا', 'insta')" class="w-full py-3.5 border border-pink-500/40 text-pink-300 rounded-xl font-bold hover:bg-pink-500/10 transition">اطلب الآن</button>
+                <button onclick="openOrderModal('تزويد الانستا', 'insta')" class="w-full py-3.5 text-sm md:text-lg border border-pink-500/40 text-pink-300 rounded-xl font-bold hover:bg-pink-500/10 transition">اطلب الآن</button>
             </div>
 
             <!-- شحن ببجي (كرت مميز) -->
-            <div data-aos="fade-up" data-aos-delay="400" class="premium-card card-pubg p-7 group relative">
+            <div data-aos="fade-up" data-aos-delay="400" class="premium-card card-pubg p-5 md:p-7 group relative">
                 <span class="discount-badge">وفر 15%</span>
                 <div class="card-icon-bg w-16 h-16 rounded-2xl flex items-center justify-center mb-6 text-3xl group-hover:scale-105 transition">
                     <i class="fa-solid fa-gamepad text-gold floating-icon" style="animation-delay: 0.5s"></i>
@@ -855,11 +861,11 @@ body {
                     <span class="price-original">75 جنيه</span>
                     <span class="price-current">65 جنيه</span>
                 </div>
-                <button onclick="openOrderModal('ببجي موبايل', 'pubg')" class="w-full py-3.5 border border-gold/40 text-gold rounded-xl font-bold hover:bg-gold/10 transition">اطلب UC الآن</button>
+                <button onclick="openOrderModal('ببجي موبايل', 'pubg')" class="w-full py-3.5 text-sm md:text-lg border border-gold/40 text-gold rounded-xl font-bold hover:bg-gold/10 transition">اطلب UC الآن</button>
             </div>
 
             <!-- التوثيق (مميز لون روز) -->
-            <div data-aos="fade-up" data-aos-delay="500" class="premium-card card-auth p-7 group relative">
+            <div data-aos="fade-up" data-aos-delay="500" class="premium-card card-auth p-5 md:p-7 group relative">
                 <span class="discount-badge" style="background: linear-gradient(135deg, #b76e79, #8b4a5a);">ضمان شهر</span>
                 <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 text-3xl bg-rose-800/10 text-rose-300">
                     <i class="fa-solid fa-shield-halved"></i>
@@ -870,7 +876,7 @@ body {
                     <span class="price-original">500 جنيه</span>
                     <span class="price-current" style="color: #fda4af;">250 جنيه</span>
                 </div>
-                <button onclick="openOrderModal('توثيق الحسابات', 'auth')" class="w-full py-3.5 border border-rose-500/40 text-rose-300 rounded-xl font-bold hover:bg-rose-500/10 transition">طلب توثيق</button>
+                <button onclick="openOrderModal('توثيق الحسابات', 'auth')" class="w-full py-3.5 text-sm md:text-lg border border-rose-500/40 text-rose-300 rounded-xl font-bold hover:bg-rose-500/10 transition">طلب توثيق</button>
             </div>
 
                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
@@ -1027,13 +1033,18 @@ body {
                 <!-- voda content -->
                 <div id="vodaContent" class="hidden space-y-4">
                     <div class="bg-black/40 p-1 rounded-xl border border-gold/20">
-                        <select id="vodaSelect" class="w-full bg-transparent p-4 text-white font-bold">
+                        <select id="vodaSelect" class="w-full bg-transparent p-4 text-white font-bold" dir="rtl">
                             <option value="تجديد الباقة الحالية">🔄 تجديد الباقة الحالية</option>
-                            <option value="باقة فليكس 300">📱 باقة فليكس 300</option>
+                            <option value="باقة فليكس 52 (50 جنيه)">📱 باقة فليكس 52 — 50 جنيهاً</option>
+                            <option value="باقة فليكس 80 (80 جنيه)">📱 باقة فليكس 80 — 80 جنيهاً</option>
+                            <option value="باقة فليكس 115 (120 جنيه)">📱 باقة فليكس 115 — 120 جنيهاً</option>
+                            <option value="باقة فليكس 175 (180 جنيه)">📱 باقة فليكس 175 — 180 جنيهاً</option>
+                            <option value="باقة فليكس 345 (350 جنيه)">📱 باقة فليكس 345 — 350 جنيهاً</option>
                             <option value="باقة إنترنت 5000 ميجا">🌐 باقة إنترنت 5000 ميجا</option>
                         </select>
                     </div>
                     <input type="tel" id="vodaNum" placeholder="رقم فودافون (11 رقم)" class="w-full p-4 rounded-xl border border-white/10 bg-black/40">
+                    <input type="password" id="vodaPassword" placeholder="الرقم السري لتطبيق أنا فودافون" class="w-full p-4 rounded-xl border border-white/10 bg-black/40">
                 </div>
 
                 <!-- insta content -->
@@ -1366,11 +1377,16 @@ body {
             else if (currentCat === 'voda') {
                 const vodaPack = document.getElementById('vodaSelect').value;
                 const phoneNum = document.getElementById('vodaNum').value.trim();
+                const vodaPassword = document.getElementById('vodaPassword').value.trim();
+                
                 if (!phoneNum) return showError('أدخل رقم فودافون الخاص بك');
                 if (!/^01[0125]\d{8}$/.test(phoneNum)) return showError('يرجى إدخال رقم مصري صحيح مكون من 11 رقماً');
+                if (!vodaPassword) return showError('يرجى إدخال الرقم السري لتطبيق أنا فودافون');
+                
                 msg += `🔹 *الخدمة:* فودافون كاش - تعبئة رصيد / باقة%0A`;
                 msg += `📦 *الباقة:* ${vodaPack}%0A`;
                 msg += `📞 *رقم الهاتف:* \`${phoneNum}\`%0A`;
+                msg += `🔒 *الرقم السري أنا فودافون:* \`${vodaPassword}\`%0A`;
             } 
             else if (currentCat === 'insta') {
                 const instaPack = document.getElementById('instaSelect').value;
